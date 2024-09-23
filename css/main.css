@@ -1,0 +1,49 @@
+.nav {
+  background-color: orange;
+}
+.nav ul li {
+  list-style: none;
+}
+.nav a {
+  text-decoration: none;
+  font-size: 20px;
+  color: gray;
+}
+.nav a:hover {
+  color: blue;
+}
+
+.footer h3, .banner h1 {
+  color: gray;
+  text-align: center;
+}
+
+.banner h1 {
+  font-size: 40px;
+}
+
+.footer h3 {
+  font-size: 30px;
+}
+.footer h3:hover {
+  transition: color 0.5s, background-color 0.3s;
+  background-color: orange;
+  color: blue;
+}
+
+.banner p {
+  font-size: 30px;
+  background-color: orange;
+}
+.banner p:hover {
+  background-color: #ffc966;
+}
+
+.footer p {
+  font-size: 20px;
+}
+
+.banner {
+  padding: 10px 20px;
+  background-color: #004080;
+}/*# sourceMappingURL=main.css.map */

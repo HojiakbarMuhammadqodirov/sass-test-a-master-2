@@ -1,0 +1,78 @@
+$color-1: orange;
+$color-2: gray;
+$color-3: blue;
+
+$font-lg: 40px;
+$font-md: 30px;
+$font-sm: 20px;
+
+.nav {
+  background-color: $color-1;
+
+  ul li {
+    list-style: none;
+  }
+
+  a {
+    text-decoration: none;
+    font-size: $font-sm;
+    color: $color-2;
+
+    &:hover {
+      color: $color-3;
+    }
+  }
+}
+%heading {
+  color: $color-2;   
+  text-align: center;
+
+}
+@mixin headings($fontSize: 50px) {
+  font-size: $fontSize;
+  color: $color-2;
+  text-align: center;
+}
+
+
+@mixin transition($param...){
+  transition: $param;
+}
+
+.banner h1 {
+  @extend %heading;
+  font-size: $font-lg;
+}
+
+.footer h3 {
+  @extend %heading;
+  font-size: $font-md;
+
+  &:hover { 
+    @include transition(color .5s, background-color .3s);
+    background-color: $color-1;
+    color: $color-3;
+  }
+}
+
+@function fontSize($size: 10px){
+  @return 2 * $size;
+
+}
+.banner p{
+  font-size: fontSize(15px);
+  background-color: $color-1;
+
+  &:hover {
+    background-color: lighten($color-1, 20%);
+  }
+}
+
+.footer p{
+  font-size: fontSize();
+}
+
+.banner {
+  padding: 10px 20px;
+  background-color: mix( green, blue);
+}
